@@ -1,8 +1,7 @@
-import User from "./users";
-import Account from "./accounts";
+import User from "./users.js";
+import Account from "./accounts.js";
 
 // 관계설정
-
 User.hasOne(Account, {
   foreignKey: "user_id",
   onDelete: "CASCADE",

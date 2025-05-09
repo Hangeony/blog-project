@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import { sequelize } from "../connt/mariaDB.js";
+import { sequelize } from "../config/mariaDB.js";
 
 const Account = sequelize.define(
   "Account",
@@ -31,7 +31,8 @@ const Account = sequelize.define(
   },
   {
     tableName: "accounts",
-    timestamps: false,
+    timestamps: true,
+    underscored: true,
   }
 );
 

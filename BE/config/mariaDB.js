@@ -17,3 +17,5 @@ export const sequelize = new Sequelize({
   dialect: "mysql", // ✅ 반드시 필요!
   logging: true,
 });
+
+export default sequelize;

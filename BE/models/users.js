@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import { sequelize } from "../config/mariaDB";
+import { sequelize } from "../config/mariaDB.js";
 
 const User = sequelize.define(
   "Users",
