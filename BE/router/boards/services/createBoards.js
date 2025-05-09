@@ -1,4 +1,4 @@
-import mariaDB from "../../../connt/mariaDB.js";
+import mariaDB from "../../../config/mariaDB.js";
 
 export const createBoard = async ({ title, content }) => {
   return new Promise((resolve, reject) => {

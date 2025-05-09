@@ -1,5 +1,5 @@
+import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
-import mariaDB from "mysql2";
 dotenv.config();
 
 console.log("DB config:", {
@@ -8,12 +8,12 @@ console.log("DB config:", {
   pwd: process.env.DB_PWD,
 });
 
-const conn = mariaDB.createConnection({
+export const sequelize = new Sequelize({
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
-  user: process.env.DB_USER,
+  username: process.env.DB_USER, // ✅ 수정됨
   password: process.env.DB_PWD,
   database: process.env.DB_NAME,
+  dialect: "mysql", // ✅ 반드시 필요!
+  logging: true,
 });
-
-export default conn;
