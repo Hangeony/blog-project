@@ -1,5 +1,6 @@
 import express from "express";
 import { sequelize } from "./config/mariaDB.js";
+import "./models/index.js";
 import routers from "./router/index.js";
 
 const app = express();
